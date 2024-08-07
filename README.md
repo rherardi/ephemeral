@@ -13,7 +13,7 @@ This README outlines the Terraform configuration for a GCP deployment with a Wor
 **Easy Scalability:** This repository contains the Terraform code to deploy WordPress application on Google Kubernetes Engine (GKE) using a Cloud SQL database. The concept is to leverage Platform as a Service (PaaS) for easy scalability, e.g., Kubermnetes Horizontal Pod Autoscaling. The front-end applicatoon can be scaled globally in a horizontal way.
 **Ephemeral Deployments:** The automation is intended to deploy infrastrcture and applications, execute applicatoon code, run tests and collect test result data, then destroy the entire solution, retaining only the data. There are several advantages to an ephemeral infrastructure aproach:
 * **Immutable Infrastructure** Application containers are not patced. They are destroyed and recreated.
-* **Strict Segregation** For multiple enterp[rise customers each customer can be segregated by cluster, of by VPC, or by GCP project to addresses a subset of concerns related to handing sensitive data.
+* **Privacy and Segregation** For multiple enterp[rise customers each customer can be segregated by cluster, of by VPC, or by GCP project to addresses a subset of concerns related to handing sensitive data.
 * **Enhanced Security** The solution inherits the security of ephemerality and immutable infrastructure and does not require human access to environments (unless tests are actually running, there's virtually nothing for hackers to attack).
  
 ![tfpgv2](https://github.com/user-attachments/assets/39f0f669-5c9e-4470-95a4-a1a3a9109699)
