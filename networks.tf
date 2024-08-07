@@ -30,7 +30,7 @@ module "firewall_rules" {
       direction          = "INGRESS"
       priority           = null
       source_ranges      = ["0.0.0.0/0"]
-      destination_ranges = ["10.10.1.2"]
+      destination_ranges = ["34.132.28.12"]
       allow = [
         {
           protocol = "tcp"
@@ -44,7 +44,7 @@ module "firewall_rules" {
       direction          = "INGRESS"
       priority           = null
       source_ranges      = ["0.0.0.0/0"]
-      destination_ranges = ["10.10.1.2"]
+      destination_ranges = ["34.132.28.12"]
       allow = [
         {
           protocol = "tcp"
@@ -62,8 +62,8 @@ module "firewall_rules" {
       //      destination_ranges = [google_sql_database_instance.db_instance.private_ip_address]
       //      source_ranges      = ["0.0.0.0/0"]
 
-      source_ranges      = ["10.10.1.2"]
-      destination_ranges = ["34.132.192.160"]
+      source_ranges      = ["34.170.7.224"]
+      destination_ranges = ["34.45.55.65"]
       allow = [
         {
           protocol = "tcp"
@@ -81,8 +81,8 @@ module "firewall_rules" {
       //      destination_ranges = [google_sql_database_instance.db_instance.private_ip_address]
       //      source_ranges      = ["0.0.0.0/0"]
 
-      source_ranges      = ["34.132.192.160"]
-      destination_ranges = ["10.10.1.2"]
+      source_ranges      = ["34.45.55.65"]
+      destination_ranges = ["34.170.7.224"]
       allow = [
         {
           protocol = "tcp"
