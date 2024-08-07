@@ -16,7 +16,7 @@ This README outlines the Terraform configuration for a GCP deployment with a Wor
 2. For multiple enterp[rise customers each customer can be segregated by cluster, of by VPC, or by GCP project to addresses a subset of concerns related to handing sensitive data.
 3. Aguably, the solution is more secure because no human access to the environments is needed, and unless tests are actually running, there's virtually nothing for hackers to attack.
  
-![tfpgv2](https://github.com/user-attachments/assets/8080db45-527b-41ce-92a3-883737941b5c)
+![tfpgv2](https://github.com/user-attachments/assets/39f0f669-5c9e-4470-95a4-a1a3a9109699)
 
 ### Directory Structure
 
