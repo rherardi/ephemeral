@@ -10,7 +10,7 @@ This README outlines the Terraform configuration for a GCP deployment with a Wor
 
 # Deployment Concepts
 
-**Automation Approach:** The automaton concept is to create literally everything using infrastrucure as code (IaC), including the VPC itself, subnets, firewal rules, GKE clusters, applications, load balancers, and Cloud SQL instances. There is no fixed infrastructure whatsoever. There are no manual steps, i.e., no use of the `gcloud` CLI, Google Cloud Console, or other tools that require post-automation actions of any kind. The basic approach is inspired by serverless (e.g., Cloud Functions).
+**Automation Approach:** The automaton concept is to create literally everything using infrastrucure as code (IaC) in a single, continuous workflow, including the VPC itself, subnets, firewal rules, GKE clusters, applications, load balancers, and Cloud SQL instances. There is no fixed infrastructure whatsoever. There are no manual steps, i.e., no use of the `gcloud` CLI, Google Cloud Console, or other tools that require post-automation actions of any kind. The basic approach is inspired by serverless (e.g., Cloud Functions).
 
 **Easy Scalability:** This repository contains the Terraform code to deploy WordPress application on Google Kubernetes Engine (GKE) using a Cloud SQL database. The concept is to leverage Platform as a Service (PaaS) for easy scalability, e.g., Kubermnetes Horizontal Pod Autoscaling. The front-end applicatoon can be scaled globally in a horizontal way.
 
