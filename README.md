@@ -6,6 +6,7 @@ This README outlines the Terraform configuration for a GCP deployment with a Wor
 * Cloud SQL database cluster setup (MySQL instance)
 * GKE cluster with a Node Pool and LoadBalancer
 * Contimnaerized WordPress web applicaton deployment on the cluster
+* Alternative Google Private Service Connect (PSC) networking (rather than IPv4).
 
 # Deployment Concepts
 
