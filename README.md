@@ -101,9 +101,10 @@ To scale the solution to serve millions of users, several approaches can be used
 * **Enforce strict network access control rules:** Limit the source ranges for firewall rules to trusted IP addresses or networks.
 * **Implement robust database security:** Use user accounts and roles with least-privilege permissions to control database access.
 * **Use an ingress controller:** Deploy an ingress controller for efficient traffic management and security features.
-* **Secure sensitive information:** Store passwords and other confidential data in a secrets management service.
+* **Secure sensitive information:** Store passwords and other confidential data in a secrets management service (not in a local terraform.tfvars file).
 * **Enable authentication for the cluster:** Implement strong authentication mechanisms for accessing the cluster.
 * **Implement additional monitoring:** The current deployment relies entirely on built-in GCP monitoring capabilities which canbe configured to provide additional functionality. However, built-in tools are not adequate for production operations. Additional services, such as Datadog and PagerDuty will be needed to go live.
+* **Private Services Connect (PSC):** PSC provides a more secure type of addressing as opposed to plain old IPv4. This is the target state for the project.   
 
 ## Security Concerns in v0.01
 
