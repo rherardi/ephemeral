@@ -17,22 +17,15 @@ resource "google_sql_database_instance" "db_instance" {
     availability_type = "ZONAL"
     ip_configuration {
       ipv4_enabled = true
+      }
       // For use with Google Privarte Service Connect (PSC)
       // private_network = google_compute_network.vpc.self_link
-      // Access configured automatically. No need to specify here.
-      // authorized_networks = [
-      // {
-      // name  = "gke-subnet"
-      // value = "10.10.1.0/24"
-      // }
-      // ]
-    }
   }
   deletion_protection = false
 }
 
 resource "google_sql_user" "users" {
-  name     = "root"
+  name     = var.db_user
   instance = google_sql_database_instance.db_instance.name
   password = var.db_password
 }
