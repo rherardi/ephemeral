@@ -118,9 +118,9 @@ As it stands that defined solution deploys and runs and should work if IPv4 fire
 
 ## Access to Running Application:
 
-http://34.132.28.12/2024/08/08/hello-world/
+   http://34.132.28.12/2024/08/08/hello-world/
 
-http://www.ledgermundi.net/2024/08/08/hello-world/
+   http://www.ledgermundi.net/2024/08/08/hello-world/
 
 * **IMPORTANT NOTE:** This is NOT secure and is ONLY for test and development.
   
