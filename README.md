@@ -109,8 +109,9 @@ To scale the solution to serve millions of users, several approaches can be used
 ## Security Concerns in v0.01
 
 * **Firewall Rules:** The firewall rules allow all IP addrtesses (0.0.0.0/0) to connect to the front-end on HTTP, HTTPS,. This is a **security risk**, as it exposes the cluster to potential attacks. The demo application (WordPress) is notorious for its security vulnerabilities.
-* **Database Access Control:** While the firewall rules restrict MySQL access to the frontend subnet, there is no explicit user or role-based access control for the database instance. The best practice is to use Google's Private Service Connect (PSC) networking option.
+* **Database Access Control:** While the firewall rules implicitly restrict MySQL access to the frontend subnet, there is no explicit user or role-based access control for the database instance. The best practice is to use Google's Private Service Connect (PSC) networking option.
 * **No separate ingress controller** for this deployment (version 0.01). This means the front-end and back-end deployments use the default Kubernetes networking and rely solely on firewall rules for security. In a real-world application, a dedicated ingress controller should be deployed and managed to enhance security.
+* **Insecure Port 80:** The applicaion is reachable on TCP port 80 (HTTP) which is noty secure. This needs to be updated to restrict access to SSL/TLS HTTPS port 443.
 
 ## Project Status (v0.01):
 As it stands that defined solution deploys and runs and should work if IPv4 firewall rules are updated post deployment. This violates the 100% automation objective. Google Private Service Connect (PSC) has not been enabled (although related code appears in the databases.tf, networks.tf, and kubernetes.tf files).
