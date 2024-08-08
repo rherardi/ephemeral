@@ -17,9 +17,15 @@ resource "google_sql_database_instance" "db_instance" {
     availability_type = "ZONAL"
     ip_configuration {
       ipv4_enabled = true
+      // Wide open ***FOR TROUBLESHOOTING ONLY***
+      // Note: This requires policy "sql.restrictAuthorizedNetwork" to be disabled for the project.
+      authorized_networks {
+        name = "tfpgv2-vpc"
+        value = "0.0.0.0/0"
       }
       // For use with Google Privarte Service Connect (PSC)
       // private_network = google_compute_network.vpc.self_link
+    }
   }
   deletion_protection = false
 }
