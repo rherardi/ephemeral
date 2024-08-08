@@ -116,6 +116,13 @@ To scale the solution to serve millions of users, several approaches can be used
 ## Project Status (v0.01):
 As it stands that defined solution deploys and runs and should work if IPv4 firewall rules are updated post deployment. This violates the 100% automation objective. Google Private Service Connect (PSC) has not been enabled (although related code appears in the databases.tf, networks.tf, and kubernetes.tf files).
 
+## Access to Running Application:
+
+http://34.132.28.12/2024/08/08/hello-world/
+http://www.ledgermundi.net/2024/08/08/hello-world/
+
+* **IMPORTANT NOTE:** This is NOT secure and is ONLY for test and development.
+  
 ## License
 
 This project is licensed under the Apache 2.0 License - see the LICENSE file for details.
