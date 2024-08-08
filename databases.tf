@@ -20,7 +20,7 @@ resource "google_sql_database_instance" "db_instance" {
       // Wide open ***FOR TROUBLESHOOTING ONLY***
       // Note: This requires policy "sql.restrictAuthorizedNetwork" to be disabled for the project.
       authorized_networks {
-        name = "tfpgv2-vpc"
+        name  = "tfpgv2-vpc"
         value = "0.0.0.0/0"
       }
       // For use with Google Privarte Service Connect (PSC)
